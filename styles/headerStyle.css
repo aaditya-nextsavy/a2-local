@@ -1,0 +1,231 @@
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.menubar span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 60px;
+}
+
+#hambmenu {
+  position: relative;
+  width: 32px;
+  height: 40px;
+  float: left;
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hambmenu span {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  vertical-align: middle;
+  margin: 8px 0 0 0px;
+  background: #CECECE;
+  border-radius: 8px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  padding: 0px;
+}
+
+.hambclicker {
+  content: '';
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 9;
+}
+
+#hambmenu span:nth-child(1) {
+  top: 0px;
+}
+
+#hambmenu span:nth-child(2),
+#hambmenu span:nth-child(3) {
+  top: 10px;
+}
+
+#hambmenu span:nth-child(4) {
+  top: 20px;
+}
+
+#hambmenu.isopen span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  opacity: 0;
+}
+
+#hambmenu.isopen span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#hambmenu.isopen span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#hambmenu.isopen span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  opacity: 0;
+}
+
+#menu {
+  position: absolute;
+  height: calc(100vh - 0px);
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  -o-transition: transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  top: 79px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+#menu ul.mobileMenuList {
+  padding-top: 30px !important;
+  padding-bottom: 30px; 
+
+}
+
+#menu ul {
+  margin-top: 0px;
+  padding: 0px;
+  color: black;
+  list-style-type: none;
+  text-align: left;
+}
+
+#menu li {
+  padding: 10px;
+  font-size: 20px;
+  /* border-bottom: 1px solid #1D1D1D; */
+  color: #fff;
+}
+
+ul.mobileMenuList li.mobileMenuItems {
+  border-bottom: 1px solid #1D1D1D;
+  margin: 0 15px;
+}
+
+#menu li a:hover {
+  color: #FAEA58;
+}
+
+
+.fa {
+  color: black;
+  padding-right: 8px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu.isopen {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.mobileMenuItems i {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+/* ul.SubMenu li {
+  font-size: 18px !important;
+} */
+
+ul.SubMenu {
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 991px) {
+  #menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .menubar span {
+    font-size: 1.5rem;
+  }
+
+  .hambclicker {
+    width: 35px;
+    height: 25px;
+  }
+
+  #menu {
+    top: 65px;
+  }
+
+  #hambmenu {
+    width: 35px;
+    height: 25px;
+  }
+
+  #hambmenu span {
+    margin: 0;
+    height: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  #hambmenu {
+    width: 30px;
+    height: 25px;
+  }
+
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}

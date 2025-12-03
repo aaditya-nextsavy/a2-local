@@ -1,0 +1,231 @@
+.bg-accent {
+    background-color: #5c0f87;
+  }
+  
+  .text-accent {
+    color: #5c0f87;
+  }
+  
+  .border-accent {
+    border-color: #5c0f87 !important;
+  }
+  
+  .overflow-x-auto {
+    overflow-x: auto !important;
+  }
+  
+  .min-h-auto {
+    min-height: auto !important;
+  }
+  
+  .max-h {
+    max-height: 670px;
+  }
+  
+  .PopularToursSliderWrapper .diff-color {
+    color: #C7C7C7;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
+  .PopularTours_swiperSlide {
+    height: 60vh !important;
+    position: relative;
+  }
+  
+  .PopularTours_swiperSlide * {
+    transition: all 0.5s;
+  }
+  
+  .PopularTours_swiperSlideInactive>div {
+    padding-left: 4rem;
+  }
+  
+  .PopularTours_swiperSlide>div>div:hover img {
+    transform: scale(1.25);
+  }
+  
+  .PopularTours_swiperSlideInactive>div>div>div {
+    background: linear-gradient(to top, black, transparent);
+  }
+  
+  .PopularTours_swiperSlideActive>div>div {
+    min-height: 60vh;
+  }
+  
+  .PopularTours_swiperSlideInactive>div>div {
+    min-height: 30vh;
+  }
+  
+  .PopularTours_tourInfo {
+    transform: translateX(calc(100% + 4rem));
+    width: 200%;
+  }
+  
+  .PopularTours_mobileTile {
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  .PopularTours_mobileTile>div {
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  .popularTour-arrow-pointer {
+    cursor: pointer;
+  }
+  
+  .min-h-auto {
+    min-height: auto !important;
+  }
+  
+  .PopularTours-swiper-slide {
+    height: 60vh !important;
+    position: relative;
+  }
+  
+  .PopularTours-swiper-slide * {
+    transition: all 0.5s;
+  }
+  
+  .PopularTours-swiper-slide-inactive>div {
+    padding: 0 1rem;
+  }
+  
+  .PopularTours-swiper-slide>div>div:hover img {
+    transform: scale(1.1);
+  }
+  
+  .PopularTours-swiper-slide-inactive>div>div>a>div {
+    background: linear-gradient(to top, black, transparent);
+  }
+  
+  .PopularTours-swiper-slide-active>div>div {
+    min-height: 60vh;
+  }
+  
+  .PopularTours-swiper-slide-inactive {
+    z-index: -1;
+  }
+  
+  .PopularTours-swiper-slide-active {
+    margin-right: 2rem;
+    z-index: 1;
+  }
+  [dir="rtl"] .PopularTours-swiper-slide-active {
+    margin-right: 0;
+  }
+  [dir="rtl"] .PopularTours-swiper-slide-active > div:first-child {
+    padding-left: 1rem;
+  }
+  
+  .PopularTours-swiper-slide-inactive>div>div {
+    min-height: 30vh;
+    cursor: pointer;
+  }
+  
+  .PopularTours-tour-info {
+    transform: translateX(calc(100% + 3rem));
+    width: 440px;
+    color: #fff;
+  }
+  
+  .PopularTours-mobile-tile {
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  .PopularTours-mobile-tile>div {
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  .addBorderBottom .bottom-border {
+    min-height: 4px !important;
+  }
+  
+  .mobilePopularTourWrapper img {
+    height: 260px;
+    object-position: center;
+  }
+  
+  /* @media (max-width: 1280px) {
+    .PopularTours-swiper-slide-inactive>div{
+      padding: 0 1rem;
+    }
+    [dir="rtl"] .PopularTours-swiper-slide-active > div:first-child{
+      padding-left: 1rem;
+    }
+    
+  } */
+  
+  @media (max-width:991px) {
+  
+    /* populer slider component */
+    .PopularTours-tour-info {
+      width: 340px;
+    }
+  
+    .PopularTours-tour-onactive-info h3 {
+      font-size: 28px;
+    }
+  
+    .PopularTours-tour-onactive-info p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+  
+    /* populer tour */
+    .mobilePopularTourWrapper img {
+      height: 240px;
+    }
+  
+  }
+  
+  @media (max-width: 475px) {
+    .mobilePopularTourWrapper img {
+      height: 210px;
+    }
+  
+  }
+  
+  @media (max-width: 375px) {
+    .mobilePopularTourWrapper img {
+      height: 180px;
+    }
+  
+  }
+  
+  @media (max-height: 768px) {
+    .PopularTours-swiper-slide, .PopularTours-swiper-slide-active>div>div {
+      min-height: 64vh !important;
+    }
+    .Testimonials-swiper {
+      bottom: 20vh;
+    }
+  }
+  
+  @media (max-height: 720px) {
+    .PopularTours-swiper-slide, .PopularTours-swiper-slide-active>div>div {
+      min-height: 66vh !important;
+    }
+    .Testimonials-swiper {
+      bottom: 15vh;
+    }
+  }
+  
+  @media (max-height: 630px) {
+    .PopularTours-swiper-slide, .PopularTours-swiper-slide-active>div>div {
+      min-height: 69vh !important;
+    }
+  }
+  @media (max-height: 570px) {
+    .PopularTours-swiper-slide, .PopularTours-swiper-slide-active>div>div {
+      min-height: 74vh !important;
+    }
+  }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>503 Service Unavailable</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --color-primary: #5C0F87;
+            --color-black: #000000;
+            --color-white: #ffffff;
+            --font-default: 'Kufam', sans-serif;
+            --font-secondary: "Work Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-default);
+        }
+
+        .page-not-found-content {
+            background: -o-linear-gradient(bottom, #5c0f872e 0%, #ffffff 70%);
+            background: -webkit-gradient(linear, left bottom, left top, from(#5c0f872e), color-stop(70%, #ffffff));
+            background: linear-gradient(0deg, #5c0f872e 0%, #ffffff 70%);
+            height: 100vh;
+        }
+
+        .error-code-wrapper {
+            max-width: 800px;
+            text-align: center;
+            height: 95vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0 12px;
+            gap: 18px;
+        }
+
+        .error-code-wrapper button.SecondaryButton {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .error-code-wrapper h2 {
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 55px;
+            /* identical to box height */
+            text-align: center;
+            color: #4B4B4B;
+            margin: 0;
+        }
+
+        .error-code-wrapper p {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            color: #949494;
+            margin: 0;
+        }
+
+        .error-code-wrapper h1 {
+            font-size: 146px;
+            line-height: 55%;
+            font-weight: 400;
+            margin: 0;
+            color: #5C0F87;
+        }
+
+        @media (max-width:991px) {
+            .error-code-wrapper {
+                gap: 12px;
+            }
+
+            .error-code-wrapper h1 {
+                font-size: 90px;
+                line-height: 80px;
+            }
+
+            .error-code-wrapper h2 {
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            .error-code-wrapper p {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-not-found-wrapper">
+        <div class="page-not-found-content">
+            <div class="error-code-wrapper text-align-center">
+                <h1>503</h1>
+                <h2>Site Under Maintenance</h2>
+                <h2>موقعنا قيد الصيانة حاليًا</h2>
+                <p>We apologize for the inconvenience. We'll be back online shortly. Thank you for your patience.</p>
+                <p>نعتذر عن الإزعاج. سنعود عبر الإنترنت قريبًا. شكرًا على صبركم.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
