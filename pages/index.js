@@ -190,7 +190,7 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
 }
 
 export const getServerSideProps = async ({ locale }) => {
-  const selectedLanguageCode = locale || 'en';
+  const selectedLanguageCode = 'en';
   const userAgent = 'userAgent';
   const deviceId = 'deviceId';
   const slug = 'home-page';
