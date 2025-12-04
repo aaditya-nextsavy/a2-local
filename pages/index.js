@@ -89,9 +89,9 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
     fetchData();
   }, [selectedLanguageCode]);
 
-  if (!selectedLanguageCode || !locationInfo || !categoryInfo || !populerTourInfo || !contactDataInfo || !trendingBlogsInfo || !metaDataInfo) {
-    return <FullScreenLoader />;
-  }
+  // if (!selectedLanguageCode || !locationInfo || !categoryInfo || !populerTourInfo || !contactDataInfo || !trendingBlogsInfo || !metaDataInfo) {
+  //   return <FullScreenLoader />;
+  // }
 
   return (
     <div className='home-page-main-wrapper'>
