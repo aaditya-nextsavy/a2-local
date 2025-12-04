@@ -92,6 +92,28 @@ export const fetchContactData = async ({ selectedLanguageCode, userAgent, device
     }
 };
 
+// export const fetchtestimonialData = async ({ selectedLanguageCode, userAgent, deviceId }) => {
+//     try {
+//         const url = new URL(`${API_BASE_URL}/testimonial`);
+//         url.searchParams.append('language_code', selectedLanguageCode);
+//         url.searchParams.append('user_agent', userAgent);
+//         url.searchParams.append('device_id', deviceId);
+
+//         const response = await fetch(url);
+
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok',response.json());
+//         }
+
+//         const data = await response.json(); // Parse JSON data from the response
+//         // console.log("api call response", data);
+
+//         return data.data;
+//     } catch (error) {
+//         console.error('Error fetching testimonials:', error);
+//         throw error;
+//     }
+// };
 export const fetchtestimonialData = async ({ selectedLanguageCode, userAgent, deviceId }) => {
     try {
         const url = new URL(`${API_BASE_URL}/testimonial`);
@@ -101,14 +123,25 @@ export const fetchtestimonialData = async ({ selectedLanguageCode, userAgent, de
 
         const response = await fetch(url);
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok',response.JSON());
+        // Always try to read API response JSON
+        let responseBody = null;
+        try {
+            responseBody = await response.json();
+        } catch (e) {
+            responseBody = { message: "Failed to parse JSON body" };
         }
 
-        const data = await response.json(); // Parse JSON data from the response
-        // console.log("api call response", data);
+        // If status is not OK, show the real server error
+        if (!response.ok) {
+            console.error("API returned an error response:", responseBody);
 
-        return data.data;
+            throw new Error(
+                `API Error: ${response.status} → ${JSON.stringify(responseBody)}`
+            );
+        }
+
+        return responseBody.data;
+
     } catch (error) {
         console.error('Error fetching testimonials:', error);
         throw error;
