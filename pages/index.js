@@ -28,7 +28,7 @@ import {
   fetchMetaInfoDetails
 } from '@/pages/api/index';
 
-function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInfo, contactDataInfo, trendingBlogsInfo, metaDataInfo,localeData }) {
+function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInfo, contactDataInfo, trendingBlogsInfo, metaDataInfo, localeData }) {
   const { t, i18n } = useTranslation();
   const [testimonialsInfo, setTestimonialsInfo] = useState([]);
   const [banners, setBanners] = useState([]);
@@ -69,8 +69,14 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
     const fetchData = async () => {
       try {
         const [testimonialData, bannerData] = await Promise.all([
-          fetchtestimonialData({ selectedLanguageCode }),
-          fetchBannersData({ selectedLanguageCode })
+          fetchtestimonialData({
+            selectedLanguageCode, userAgent: "userAgent",
+            deviceId: "deviceId"
+          }),
+          fetchBannersData({
+            selectedLanguageCode, userAgent: "userAgent",
+            deviceId: "deviceId"
+          })
         ]);
 
         const banners = bannerData.data.reduce((acc, banner) => {
@@ -85,10 +91,10 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
         console.error('Error fetching data:', error);
       }
     };
-setTimeout(() => {
-    fetchData();
-}, 2000);
-  
+    setTimeout(() => {
+      fetchData();
+    }, 2000);
+
   }, [selectedLanguageCode]);
 
   // if (!selectedLanguageCode || !locationInfo || !categoryInfo || !populerTourInfo || !contactDataInfo || !trendingBlogsInfo || !metaDataInfo) {
@@ -96,8 +102,8 @@ setTimeout(() => {
   // }
 
   return (
-<><h1>
-  hi guys welcome back to my channel</h1></>
+    <><h1>
+      hi guys welcome back to my channel</h1></>
   );
 }
 
@@ -126,7 +132,7 @@ export const getServerSideProps = async ({ locale }) => {
         contactDataInfo: contactData,
         trendingBlogsInfo: trendingBlogs,
         metaDataInfo: metaData,
-        localeData:locale,
+        localeData: locale,
 
       }
     };
@@ -140,7 +146,7 @@ export const getServerSideProps = async ({ locale }) => {
         contactDataInfo: null,
         trendingBlogsInfo: null,
         metaDataInfo: null,
-        localeData:locale,
+        localeData: locale,
 
       }
     };
