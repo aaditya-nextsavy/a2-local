@@ -10,7 +10,7 @@ export const fetchLocations = async ({ selectedLanguageCode, userAgent, deviceId
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response was not ok',response.JSON());
         }
 
         const data = await response.json(); // Parse JSON data from the response
