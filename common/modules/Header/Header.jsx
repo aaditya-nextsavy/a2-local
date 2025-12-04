@@ -86,9 +86,9 @@ const Header = ({ populerTourData, categoryData }) => {
       setHeader("siteHeader");
     }
   };
-  if (!token && loading) {
-    return <FullScreenLoader />;
-  }
+  // if (loading) {
+  //   return <FullScreenLoader />;
+  // }
   return (
     <header className={`${siteHeader} main-header`} >
       <div className="container">
