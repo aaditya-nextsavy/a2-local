@@ -120,7 +120,7 @@ setTimeout(() => {
                     {populerTourInfo && <PopulerTourSlider list={populerTourInfo} selectedLanguageCode={selectedLanguageCode} />}
                     <BannerBigHorizontal frontPageHorizontal={banners[1]} />
                     <CategoriesSliderMain categoryInfo={categoryInfo} />
-                    <div className="container">
+                    {/* <div className="container">
                       <div className="row justify-content-center">
                         <div className="col-lg-4 col-md-6 col-sm-12 my-3">
                           <BannerBigVerticalLitePurple bigVerticalLitePurple={banners[2]} />
@@ -132,14 +132,14 @@ setTimeout(() => {
                           <BannerBigVerticalLitePurpleTwo bigVerticalLitePurpleTwo={banners[4]} />
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <ExploreSlider locationData={locationInfo} />
                     <FeatureSection />
                   </div>
                   <OurPartners />
-                  {testimonialsInfo && <TestimonialMap testimonialsInfo={testimonialsInfo} />}
+                  {/* {testimonialsInfo && <TestimonialMap testimonialsInfo={testimonialsInfo} />} */}
                   <div className='BackgroundClrPrimary'>
-                    <TrendingBlogs trendingBlogsInfo={trendingBlogsInfo} />
+                    {/* <TrendingBlogs trendingBlogsInfo={trendingBlogsInfo} /> */}
                   </div>
                   <Footer locationInfo={locationInfo} categoryInfo={categoryInfo} contactDataInfo={contactDataInfo} selectedLanguageCode={selectedLanguageCode} />
                 </>
@@ -163,7 +163,7 @@ setTimeout(() => {
               {populerTourInfo && <PopulerTourSlider list={populerTourInfo} selectedLanguageCode={selectedLanguageCode} />}
               <BannerBigHorizontal frontPageHorizontal={banners[1]} />
               <CategoriesSliderMain categoryInfo={categoryInfo} />
-              <div className="container">
+              {/* <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-4 col-md-6 col-sm-12 my-3">
                     <BannerBigVerticalLitePurple bigVerticalLitePurple={banners[2]} />
@@ -175,14 +175,14 @@ setTimeout(() => {
                     <BannerBigVerticalLitePurpleTwo bigVerticalLitePurpleTwo={banners[4]} />
                   </div>
                 </div>
-              </div>
+              </div> */}
               <ExploreSlider locationData={locationInfo} />
               <FeatureSection />
             </div>
             <OurPartners />
-            {testimonialsInfo && <TestimonialMap testimonialsInfo={testimonialsInfo} />}
+            {/* {testimonialsInfo && <TestimonialMap testimonialsInfo={testimonialsInfo} />} */}
             <div className='BackgroundClrPrimary'>
-              <TrendingBlogs trendingBlogsInfo={trendingBlogsInfo} />
+              {/* <TrendingBlogs trendingBlogsInfo={trendingBlogsInfo} /> */}
             </div>
             <Footer locationInfo={locationInfo} categoryInfo={categoryInfo} contactDataInfo={contactDataInfo} selectedLanguageCode={selectedLanguageCode} />
           </>
