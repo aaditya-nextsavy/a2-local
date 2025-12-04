@@ -28,7 +28,7 @@ import {
   fetchMetaInfoDetails
 } from '@/pages/api/index';
 
-function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInfo, contactDataInfo, trendingBlogsInfo, metaDataInfo }) {
+function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInfo, contactDataInfo, trendingBlogsInfo, metaDataInfo,localeData }) {
   const { t, i18n } = useTranslation();
   const [testimonialsInfo, setTestimonialsInfo] = useState([]);
   const [banners, setBanners] = useState([]);
@@ -65,7 +65,7 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
   };
 
   useEffect(() => {
-    console.log("selectedLanguageCode", selectedLanguageCode);
+    console.log("localeData", localeData);
     const fetchData = async () => {
       try {
         const [testimonialData, bannerData] = await Promise.all([
@@ -214,6 +214,7 @@ export const getServerSideProps = async ({ locale }) => {
         contactDataInfo: contactData,
         trendingBlogsInfo: trendingBlogs,
         metaDataInfo: metaData,
+        localeData:locale,
 
       }
     };
@@ -227,6 +228,7 @@ export const getServerSideProps = async ({ locale }) => {
         contactDataInfo: null,
         trendingBlogsInfo: null,
         metaDataInfo: null,
+        localeData:locale,
 
       }
     };
