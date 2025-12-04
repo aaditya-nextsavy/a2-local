@@ -85,8 +85,10 @@ function Home({ selectedLanguageCode, locationInfo, categoryInfo, populerTourInf
         console.error('Error fetching data:', error);
       }
     };
-
+setTimeout(() => {
     fetchData();
+}, 2000);
+  
   }, [selectedLanguageCode]);
 
   // if (!selectedLanguageCode || !locationInfo || !categoryInfo || !populerTourInfo || !contactDataInfo || !trendingBlogsInfo || !metaDataInfo) {
